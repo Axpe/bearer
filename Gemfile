@@ -49,4 +49,5 @@ end
 group :production do
   # Special productive (in heroku)
   gem 'pg'
+  gem 'puma'
 end
