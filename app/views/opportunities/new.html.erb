@@ -23,7 +23,7 @@
 
   <p>
     <%= f.label :stagename %><br>
-    <%= select_tag :stagename, OpportunityStage.all.collect { |os| os.masterlabel } %>
+    <%= select (:opportunity, :stagename, OpportunityStage.all.collect { |os| os.masterlabel } ) %>
   </p>
 
   <p><%= f.submit %></p>
