@@ -1,0 +1,27 @@
+<p>
+  <strong>Nombre:</strong>
+  <%= @opportunity.name %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @opportunity.description %>
+</p>
+
+<p>
+  <strong>Cantidad: </strong>
+  <%= @opportunity.amount %>
+</p>
+
+<p>
+  <strong>Fecha de Fin:</strong>
+  <%= @opportunity.closedate %>
+</p>
+
+<p>
+  <strong>StageName:</strong>
+  <%= @opportunity.stagename %>
+</p>
+
+<%= link_to 'Editar', edit_opportunity_path(@opportunity) %> | 
+<%= link_to 'Atrás', opportunities_path %>
