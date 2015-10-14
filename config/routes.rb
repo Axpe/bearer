@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   root 'opportunities#index'
   resources :opportunities
+  resources :accounts
   
   get 'hello/index'
 
