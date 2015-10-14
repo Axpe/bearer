@@ -50,4 +50,5 @@ group :production do
   # Special productive (in heroku)
   gem 'pg'
   gem 'puma'
+  gem 'rails_12factor'
 end

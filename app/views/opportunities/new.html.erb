@@ -23,13 +23,10 @@
 
   <p>
     <%= f.label :stagename %><br>
-    <%= select_tag :opportunity, :stagename,
-		 OpportunityStage.all.collect { |os| os.masterlabel } %>
+    <%= select_tag :opportunity, :stagename, OpportunityStage.all.collect { |os| os.masterlabel } %>
   </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
+  <p><%= f.submit %></p>
 <% end %>
 
 <%= link_to 'Atrás', opportunities_path %>
