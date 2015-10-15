@@ -10,6 +10,11 @@
     <%= f.label :shippingcity %><br>
     <%= f.text_area :shippingcity %>
   </p>
+  
+  <p>
+    <%= f.label 'Cuenta' %><br>
+    <%= select(:contact, :account__bearerid__c, Account.all.collect { |c| [c.id,c.name] }) %>
+  </p>
 
   <p><%= f.submit %></p>
 <% end %>

@@ -44,7 +44,7 @@ class ContactsController < ApplicationController
   
   private
   def contact_params
-    params.require(:contact).permit(:name, :type, :website)
+    params.require(:contact).permit(:name, :type, :website, :account__bearerid__c )
   end
   
 end
