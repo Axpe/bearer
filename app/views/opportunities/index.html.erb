@@ -24,9 +24,12 @@
           <%= link_to edit_opportunity_path(opportunity), {class: "btn btn-default btn-sm "} do %>
   			<span class="glyphicon glyphicon-edit"/>
 		  <% end %>
-      	  <%= link_to 'Borrar', opportunity_path(opportunity),
+      	  <%= link_to opportunity_path(opportunity), {
+		      class: "btn btn-default btn-sm ",
               method: :delete,
-              data: { confirm: '¿Seguro?' } %>
+              data: { confirm: '¿Seguro?' } } do %>
+				  <span class="glyphicon glyphicon-remove"/>
+		  <% end %>
 	  </td>
     </tr>
   <% end %>
