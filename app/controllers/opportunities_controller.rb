@@ -1,5 +1,7 @@
 class OpportunitiesController < ApplicationController
   
+  validates :name, presence: true
+  
   def index
     @opportunities = Opportunity.all
   end
