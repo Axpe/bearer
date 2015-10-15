@@ -7,12 +7,11 @@
 	<table>
 	  <tr>
 	    <th>Nombre</th>
-		<th>Type</th>
-		<th>Descripción</th>
-	    <th>Shipping City</th>
-		<th>Shipping Country</th>
+		<th>Tipo</th>
+		<th width='30%'>Descripción</th>
+	    <th>Ciudad</th>
+		<th>País</th>
 		<th>Created Date</th>
-		<th>ID</th>
 	    <th colspan="2"></th>
 	  </tr>
 	
@@ -24,7 +23,6 @@
 	      <td><%= account.shippingcity %></td>
 	      <td><%= account.shippingcountry %></td>
 	      <td><%= account.createddate %></td>
-	      <td><%= account.sfid %></td>
 	      <td><%= link_to 'Ver', account_path(account) %></td>
 	      <td><%= link_to 'Editar', edit_account_path(account) %></td>
 	      <td><%= link_to 'Borrar', account_path(account),
