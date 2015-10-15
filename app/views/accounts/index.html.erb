@@ -9,14 +9,18 @@
 	    <th>Nombre</th>
 		<th>Type</th>
 	    <th>Shipping City</th>
+		<th>Shipping Country</th>
+		<th>Created Date</th>
 	    <th colspan="2"></th>
 	  </tr>
 	
 	  <% @accounts.each do |account| %>
 	    <tr>
 	      <td><%= account.name %></td>
-	      <td><%= account.shippingcity %></td>
 		  <td><%= account.type %></td>
+	      <td><%= account.shippingcity %></td>
+	      <td><%= account.shippingcountry %></td>
+	      <td><%= account.createdate %></td>
 	      <td><%= link_to 'Ver', account_path(account) %></td>
 	      <td><%= link_to 'Editar', edit_account_path(account) %></td>
 	      <td><%= link_to 'Borrar', account_path(account),
