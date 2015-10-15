@@ -21,7 +21,7 @@
       <td><%= opportunity.stagename %></td>
       <td>
 		  <%= link_to 'Ver', opportunity_path(opportunity) %>
-          <%= link_to edit_opportunity_path, {class: "btn btn-default btn-sm "} do %>
+          <%= link_to edit_opportunity_path(opportunity), {class: "btn btn-default btn-sm "} do %>
   			<span class="glyphicon glyphicon-edit"/>
 		  <% end %>
       	  <%= link_to 'Borrar', opportunity_path(opportunity),
