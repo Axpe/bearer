@@ -7,8 +7,16 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-	  <header>
-	  </header>
-    	<%= yield %>
+		<header>
+			<nav>
+				<ul>
+					<li><%= link_to 'Opportunities', opportunities_path %></li>
+					<li><%= link_to 'Accounts', accounts_path %></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+    		<%= yield %>
+		</section>
   </body>
 </html>
