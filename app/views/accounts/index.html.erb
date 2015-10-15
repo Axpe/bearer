@@ -1,23 +1,28 @@
-<h1>Lista de Cuentas</h1>
-
-<%= link_to 'Nueva cuenta', new_account_path %>
-
-<table>
-  <tr>
-    <th>Nombre</th>
-    <th>Shipping City</th>
-    <th colspan="2"></th>
-  </tr>
-
-  <% @accounts.each do |account| %>
-    <tr>
-      <td><%= account.name %></td>
-      <td><%= account.shippingcity %></td>
-      <td><%= link_to 'Ver', account_path(account) %></td>
-      <td><%= link_to 'Editar', edit_account_path(account) %></td>
-      <td><%= link_to 'Borrar', account_path(account),
-              method: :delete,
-              data: { confirm: '¿Seguro?' } %></td>
-    </tr>
-  <% end %>
-</table>
+<header>
+	<h1>Lista de Cuentas</h1>
+</header>
+<section>
+	<%= link_to 'Nueva cuenta', new_account_path %>
+	
+	<table>
+	  <tr>
+	    <th>Nombre</th>
+		<th>Type</th>
+	    <th>Shipping City</th>
+	    <th colspan="2"></th>
+	  </tr>
+	
+	  <% @accounts.each do |account| %>
+	    <tr>
+	      <td><%= account.name %></td>
+	      <td><%= account.shippingcity %></td>
+		  <td><%= account.type %></td>
+	      <td><%= link_to 'Ver', account_path(account) %></td>
+	      <td><%= link_to 'Editar', edit_account_path(account) %></td>
+	      <td><%= link_to 'Borrar', account_path(account),
+	              method: :delete,
+	              data: { confirm: '¿Seguro?' } %></td>
+	    </tr>
+	  <% end %>
+	</table>
+</section>
