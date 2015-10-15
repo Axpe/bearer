@@ -1,0 +1,26 @@
+<header>
+	<h1>Lista de Contactos</h1>
+</header>
+<section>
+	<%= link_to 'Nuevo contacto', new_contact_path %>
+	
+	<table>
+	  <tr>
+	    <th>Nombre</th>
+		<th>Type</th>
+	    <th colspan="2"></th>
+	  </tr>
+	
+	  <% @contacts.each do |contact| %>
+	    <tr>
+	      <td><%= contact.name %></td>
+		  <td><%= contact.type %></td>
+	      <td><%= link_to 'Ver', contact_path(contact) %></td>
+	      <td><%= link_to 'Editar', edit_contact_path(contact) %></td>
+	      <td><%= link_to 'Borrar', contact_path(contact),
+	              method: :delete,
+	              data: { confirm: '¿Seguro?' } %></td>
+	    </tr>
+	  <% end %>
+	</table>
+</section>
