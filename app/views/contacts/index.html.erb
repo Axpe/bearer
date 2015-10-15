@@ -17,7 +17,7 @@
 	
 	  <% @contacts.each do |contact| %>
 	    <tr>
-	      <td><%= image_tag contact.photourl %></td>
+	      <td><%= image_tag "https://emea.salesforce.com#{contact.photourl}" %></td>
 	      <td><%= contact.name %></td>
 	      <td><%= contact.email %></td>
 	      <td><%= contact.firstname %></td>
