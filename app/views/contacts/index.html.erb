@@ -6,6 +6,7 @@
 	
 	<table>
 	  <tr>
+		<th>Foto</th>
 	    <th>Alias</th>
 	    <th>Email</th>
 	    <th>Nombre</th>
@@ -16,6 +17,7 @@
 	
 	  <% @contacts.each do |contact| %>
 	    <tr>
+	      <td><%= contact.photourl %></td>
 	      <td><%= contact.name %></td>
 	      <td><%= contact.email %></td>
 	      <td><%= contact.firstname %></td>
