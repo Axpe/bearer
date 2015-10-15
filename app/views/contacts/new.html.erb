@@ -13,7 +13,7 @@
   
   <p>
     <%= f.label 'Cuenta' %><br>
-    <%= select(:contact, :account__bearerid__c, Account.all.collect { |c| [c.id,c.name] }) %>
+    <%= select(:contact, :account__bearerid__c, Account.all.collect { |c| [c.name,c.id] }) %>
   </p>
 
   <p><%= f.submit %></p>
