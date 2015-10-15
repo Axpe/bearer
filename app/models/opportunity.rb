@@ -1,5 +1,4 @@
 class Opportunity < ActiveRecord::Base
-  validates :name, presence: true, message: "Debe existir un nombre"
-  
+  validates :name, presence: true
   self.table_name = 'salesforcebearer.opportunity'
 end
