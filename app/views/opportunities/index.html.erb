@@ -1,7 +1,7 @@
 <h1>Lista de oportunidades</h1>
 
 <%= link_to new_opportunity_path, {class: "btn btn-default btn-sm "} do %>
-  <span class="glyphicon glyphicon-plus"></span> Nueva Oportunidad 
+  <span class="glyphicon glyphicon-plus"/>Nueva Oportunidad 
 <% end %>
 
 <table class="table">
@@ -10,7 +10,7 @@
     <th>Cantidad</th>
     <th>Fecha de Fin</th>
     <th>Estado</th>
-    <th colspan="2">Administración</th>
+    <th>Administración</th>
   </tr>
 
   <% @opportunities.each do |opportunity| %>
@@ -19,11 +19,15 @@
       <td><%= opportunity.amount %></td>
       <td><%= opportunity.closedate %></td>
       <td><%= opportunity.stagename %></td>
-      <td><%= link_to 'Ver', opportunity_path(opportunity) %></td>
-      <td><%= link_to 'Editar', edit_opportunity_path(opportunity) %></td>
-      <td><%= link_to 'Borrar', opportunity_path(opportunity),
+      <td>
+		  <%= link_to 'Ver', opportunity_path(opportunity) %>
+          <%= link_to edit_opportunity_path, {class: "btn btn-default btn-sm "} do %>
+  			<span class="glyphicon glyphicon-edit"/>
+		  <% end %>
+      	  <%= link_to 'Borrar', opportunity_path(opportunity),
               method: :delete,
-              data: { confirm: '¿Seguro?' } %></td>
+              data: { confirm: '¿Seguro?' } %>
+	  </td>
     </tr>
   <% end %>
 </table>
